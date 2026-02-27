@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://djjyc7msi2jyq" path="res://Tscenes/player.tscn" id="1_tamx6"]
 [ext_resource type="PackedScene" uid="uid://bkjx2vo2w6df1" path="res://Tscenes/map.tscn" id="2_v2d2x"]
+[ext_resource type="PackedScene" path="res://Tscenes/map_asteroid.tscn" id="3_olq18"]
 
 [node name="MAIN" type="Node2D" unique_id=1800609232]
 
@@ -9,3 +10,6 @@
 
 [node name="Map" parent="." unique_id=905556363 instance=ExtResource("2_v2d2x")]
 position = Vector2(0, 37)
+
+[node name="Map-Asteroid" parent="." unique_id=635959620 instance=ExtResource("3_olq18")]
+position = Vector2(-770, 38)
