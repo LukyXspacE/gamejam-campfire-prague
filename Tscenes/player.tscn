@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dj2h72sauqh3c" path="res://Scrpits/player.gd" id="1_xqxdq"]
 [ext_resource type="Texture2D" uid="uid://bp5c6cek06yi4" path="res://Assets/astroguy.png" id="2_xqxdq"]
-[ext_resource type="PackedScene" uid="uid://chdtslp3fh321" path="res://Tscenes/controler_cursor_controler.tscn" id="3_ronfq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptprp"]
 atlas = ExtResource("2_xqxdq")
@@ -50,5 +49,3 @@ shape = SubResource("CapsuleShape2D_742h5")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=767877867]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
-
-[node name="ControlerCursorControler" parent="." unique_id=613703130 instance=ExtResource("3_ronfq")]

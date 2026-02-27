@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://1mb7rwp08nf" path="res://Assets/theRock.png" id="1_fypjp"]
 [ext_resource type="Texture2D" uid="uid://doawfricu465i" path="res://Assets/Structures.png" id="2_bfo24"]
+[ext_resource type="Texture2D" uid="uid://uh3lylbcjbg6" path="res://Assets/ore.png" id="3_bxxy6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgjrh"]
 texture = ExtResource("1_fypjp")
@@ -50,7 +51,28 @@ texture = ExtResource("2_bfo24")
 3:0/0 = 0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -5.0762773, -8.675819, -4.9839816, -8, -8, 8, -8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rsgrn"]
+texture = ExtResource("3_bxxy6")
+separation = Vector2i(1, 1)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rgjrh")
 sources/1 = SubResource("TileSetAtlasSource_d1byb")
+sources/2 = SubResource("TileSetAtlasSource_rsgrn")

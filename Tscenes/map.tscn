@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ccjtdn46if20w"]
 
-[ext_resource type="TileSet" path="res://tscenes/Tileset.tres" id="1_rgjrh"]
+[ext_resource type="TileSet" uid="uid://uphukfagcdaa" path="res://Other/Tileset.tres" id="1_rgjrh"]
 [ext_resource type="Script" uid="uid://bdcnwcakdyelh" path="res://Scrpits/map.gd" id="2_rgjrh"]
 
 [node name="Map" type="TileMapLayer" unique_id=905556363]
