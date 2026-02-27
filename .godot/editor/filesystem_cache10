@@ -1,0 +1,11 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1772212708
+icon.svg::CompressedTexture2D::6068284070270277176::1772210695::1772211604::1::::<><><>0<>0<>6573cb08cadbae6ac6078bdd4d90c038<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1772212638::0::1::::<><><>0<>0<><>::
+::res://Assets/::1772212715
+astroguy.png::CompressedTexture2D::3501361576196891861::1772212715::1772212718::1::::<><><>0<>0<>73bee9d1acddb43425905d4cbfc125f1<>res://.godot/imported/astroguy.png-6057b57fce1c868187b6edfdd098d164.ctex::
+::res://Scrpits/::1772212638
+player.gd::GDScript::7847183453499828502::1772212638::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://tscenes/::1772212638
+main.tscn::PackedScene::2571485636179658845::1772212638::0::1::::<><><>0<>0<><>::
+player.tscn::PackedScene::-1::1772212638::0::1::::<><><>0<>0<><>::
