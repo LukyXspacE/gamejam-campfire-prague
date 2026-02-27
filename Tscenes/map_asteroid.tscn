@@ -1,0 +1,48 @@
+[gd_scene format=4 uid="uid://c2yf836m2wx20"]
+
+[ext_resource type="Texture2D" uid="uid://1mb7rwp08nf" path="res://Assets/theRock.png" id="1_eoj33"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgjrh"]
+texture = ExtResource("1_eoj33")
+separation = Vector2i(1, 1)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, 0.29676628, -8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.395689, -8, 8, 8, -8, 8, -8, -8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 7.122406, 1.6816788, 3.7590466, 6.5288715, -5.0450373, 5.3418026, -8, -8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -6.5288715, 3.3633575, -8, -2.8687477, -0.59353447, -8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -0.395689, 8.804085, -8, -8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -2.6709023, 8, -8, 8, -8, -8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.8579693, -8, 8, -0.7913799, 3.561203, 5.242882, -8, 8, -8, -8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.8579693, -8, 8, -0.7913799, 8, 8, -8, 8, -7.122405, -4.2536592, -5.0450373, -8)
+
+[sub_resource type="TileSet" id="TileSet_bc25c"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_rgjrh")
+
+[node name="Map-Asteroid" type="TileMapLayer" unique_id=905556363]
+tile_map_data = PackedByteArray("AAAAAP//AAABAAAAAAD/////AAABAAAAAAABAP//AAACAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAD+////AAAAAAAAAAD9/wAAAAAAAAAAAAAEAAAAAAACAAAAAAAFAAEAAAACAAAAAAAFAAIAAAACAAEAAAAFAAMAAAACAAEAAAAFAAQAAAACAAIAAAAEAAUAAAACAAIAAAADAAUAAAAAAAIAAAACAAQAAAABAAIAAAABAAUAAAACAAEAAAABAAYAAAACAAIAAAD8/wUAAAAAAAIAAAD7/wQAAAABAAIAAAD6/wUAAAACAAIAAAD5/wUAAAAAAAIAAAD5/wQAAAAAAAEAAAD5/wMAAAABAAEAAAD4/wMAAAADAAEAAAD4/wIAAAAAAAIAAAD4/wEAAAACAAAAAAD5/wIAAAABAAAAAAD3/wEAAAACAAMAAAD2/wEAAAACAAMAAAD1/wEAAAAAAAIAAAD1/wAAAAABAAMAAAD1////AAADAAMAAAD6/wEAAAAAAAAAAAD9/wEAAAAAAAIAAAD+/wIAAAAAAAIAAAD7/wEAAAACAAAAAAD7/wIAAAACAAIAAAD7/wMAAAACAAAAAAD6/wIAAAABAAEAAAD6/wMAAAABAAEAAAD6/wQAAAABAAEAAAD//wIAAAACAAIAAAAAAAEAAAACAAIAAAABAAAAAAABAAIAAAACAAEAAAAAAAIAAAADAAIAAAAAAAEAAAACAAMAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAYAAAAAAAIAAAAAAAUAAAABAAAAAAD//wUAAAAAAAAAAAD//wYAAAADAAAAAAD9/wUAAAADAAIAAAD8/wQAAAACAAAAAAD+/wAAAAABAAEAAAD//wAAAAABAAEAAAAAAAAAAAABAAEAAAD//wEAAAABAAEAAAD+/wEAAAABAAEAAAADAAEAAAABAAEAAAAEAAEAAAABAAEAAAAEAAIAAAABAAEAAAAEAAMAAAABAAEAAAAEAAQAAAABAAEAAAADAAQAAAABAAEAAAADAAMAAAABAAEAAAAIAAIAAAAAAAMAAAAFAP7/AAAAAAMAAAALAP//AAAAAAMAAADy/wEAAAAAAAMAAADx//3/AAAAAAMAAADq/wIAAAAAAAMAAADu/wAAAAAAAAMAAAARAP7/AAAAAAMAAAD4//v/AAAAAAMAAAAFAPn/AAAAAAMAAAD///r/AAAAAAMAAAA=")
+tile_set = SubResource("TileSet_bc25c")
+use_kinematic_bodies = true
