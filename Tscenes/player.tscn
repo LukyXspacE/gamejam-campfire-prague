@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://djjyc7msi2jyq"]
+
+[ext_resource type="Script" uid="uid://dj2h72sauqh3c" path="res://Scrpits/player.gd" id="1_xqxdq"]
+[ext_resource type="Texture2D" uid="uid://bp5c6cek06yi4" path="res://Assets/astroguy.png" id="2_xqxdq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptprp"]
+atlas = ExtResource("2_xqxdq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h22u1"]
+atlas = ExtResource("2_xqxdq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ver7"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptprp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h22u1")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_742h5"]
+radius = 2.0
+height = 14.0
+
+[node name="Player" type="CharacterBody2D" unique_id=959210951]
+script = ExtResource("1_xqxdq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=180504346]
+sprite_frames = SubResource("SpriteFrames_1ver7")
+animation = &"walk"
+frame = 1
+frame_progress = 0.60842794
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1669056824]
+shape = SubResource("CapsuleShape2D_742h5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=767877867]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
