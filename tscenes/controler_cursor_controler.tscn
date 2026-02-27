@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://chdtslp3fh321"]
+
+[ext_resource type="Script" uid="uid://dutx3k71vhxme" path="res://Scrpits/controler_cursor_controler.gd" id="1_at2fs"]
+
+[node name="ControlerCursorControler" type="Node2D" unique_id=613703130]
+script = ExtResource("1_at2fs")
