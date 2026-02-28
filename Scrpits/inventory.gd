@@ -1,6 +1,5 @@
 extends Node2D
 
-var ur
-
-func _process(delta: float) -> void:
-	
+var uranium = 0
+var ironRaw = 0
+var iron = 0
