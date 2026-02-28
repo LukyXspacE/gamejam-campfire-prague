@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
-
 const SPEED = 3.0
 const JUMP_VELOCITY = -100.0
-const SLIPPERY_INDEX = 1
+const SLIPPERY_INDEX = 2
 
 @onready var sprite = $AnimatedSprite2D
 
@@ -19,8 +18,6 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("Left", "Right")
 	if direction:
 		velocity.x += direction * SPEED
-	elif velocity.x > 0:
-		velocity.x -= SLIPPERY_INDEX
 	
 	if direction != 0:
 		sprite.play("walk")
