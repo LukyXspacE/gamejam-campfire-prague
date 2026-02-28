@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dj2h72sauqh3c" path="res://Scrpits/player.gd" id="1_xqxdq"]
 [ext_resource type="Texture2D" uid="uid://bp5c6cek06yi4" path="res://Assets/astroguy.png" id="2_xqxdq"]
+[ext_resource type="PackedScene" uid="uid://c8qy2dtxqo5ub" path="res://Tscenes/inventory.tscn" id="3_ronfq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptprp"]
 atlas = ExtResource("2_xqxdq")
@@ -46,6 +47,12 @@ frame_progress = 0.60842794
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1669056824]
 shape = SubResource("CapsuleShape2D_742h5")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=767877867]
+[node name="Cam" type="Camera2D" parent="." unique_id=767877867]
+unique_name_in_owner = true
 zoom = Vector2(8, 8)
 position_smoothing_enabled = true
+
+[node name="Inventory" parent="Cam" unique_id=647542133 instance=ExtResource("3_ronfq")]
+unique_name_in_owner = true
+z_index = 1000
+position = Vector2(-73, -41)

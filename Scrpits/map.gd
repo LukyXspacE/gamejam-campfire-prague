@@ -6,9 +6,13 @@ extends TileMapLayer
 func _input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("Mine"):
-		var mouse_pos = get_local_mouse_position()       # mouse relative to TileMap
-		var cell = local_to_map(mouse_pos)              # convert to tile coordinates
-		erase_cell(cell)                 # remove the tile
+		var mouse_pos = get_local_mouse_position()
+		var cell = local_to_map(mouse_pos)
+		
+		var data = get_cell_source_id(cell)
+		player.addResource(data)
+		
+		erase_cell(cell)
 	
 	if event.is_action_pressed("Build"):
 		var mouse_pos = get_local_mouse_position()

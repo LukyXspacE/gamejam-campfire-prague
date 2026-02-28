@@ -1,6 +1,45 @@
 [gd_scene format=3 uid="uid://c8qy2dtxqo5ub"]
 
 [ext_resource type="Script" uid="uid://srdlue4k3k0w" path="res://Scrpits/inventory.gd" id="1_aoq13"]
+[ext_resource type="Texture2D" uid="uid://cyhl25r8pqal6" path="res://Assets/uran.png" id="2_xmt1a"]
+[ext_resource type="Texture2D" uid="uid://euoi4f3ljuqa" path="res://Assets/iron_raw.png" id="3_pd81g"]
+[ext_resource type="Texture2D" uid="uid://c6oowf377t3lk" path="res://Assets/iron_smelted.png" id="4_j22fr"]
 
 [node name="Inventory" type="Node2D" unique_id=647542133]
 script = ExtResource("1_aoq13")
+
+[node name="SpriteUran" type="Sprite2D" parent="." unique_id=1233349270]
+position = Vector2(8, 8)
+texture = ExtResource("2_xmt1a")
+
+[node name="SpriteIronRaw" type="Sprite2D" parent="." unique_id=1198730416]
+position = Vector2(8, 22)
+texture = ExtResource("3_pd81g")
+
+[node name="SpriteIronCoocked" type="Sprite2D" parent="." unique_id=1549871008]
+position = Vector2(8, 35)
+texture = ExtResource("4_j22fr")
+
+[node name="LabelUran" type="Label" parent="." unique_id=476578955]
+offset_left = 22.0
+offset_top = 2.0
+offset_right = 27.0
+offset_bottom = 14.0
+theme_override_font_sizes/font_size = 8
+text = "0"
+
+[node name="LabeIronRaw" type="Label" parent="." unique_id=1413898642]
+offset_left = 22.0
+offset_top = 15.0
+offset_right = 27.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 8
+text = "0"
+
+[node name="LabelIronCoocke" type="Label" parent="." unique_id=1408705778]
+offset_left = 22.0
+offset_top = 29.0
+offset_right = 27.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 8
+text = "0"

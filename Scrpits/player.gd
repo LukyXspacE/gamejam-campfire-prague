@@ -5,6 +5,10 @@ const JUMP_VELOCITY = -100.0
 const SLIPPERY_INDEX = 2
 
 @onready var sprite = $AnimatedSprite2D
+@onready var inventory = %Inventory
+
+func addResource(id):
+	inventory.addResource(id)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
