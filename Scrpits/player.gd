@@ -16,6 +16,9 @@ var playerInside := false
 
 var isDead = false
 
+var startFallY = position.y
+var isFaling = false
+
 func _input(event: InputEvent) -> void:
 	if event.is_action("Place1"):
 		bp.set_cell(Vector2i(1, 4), 1, Vector2i(0,0))
@@ -49,10 +52,12 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor() and not isDead:
 		velocity += get_gravity() * delta * 0.18
+		isFaling = true
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor() and not isDead:
 		velocity.y = JUMP_VELOCITY
+		startFallY = position.y
 
 	var direction := Input.get_axis("Left", "Right")
 	if direction and not isDead:
@@ -78,8 +83,13 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed("Sell") and playerInside:
 		inventory.sell()
-		
-	if oxygen <= 0:
-		gameOver.die()
+	
+	if oxygen <= 0 or (abs(position.y - startFallY) > 160 and isFaling and is_on_floor()):
+		gameOver.die(inventory.money)
 		isDead = true
+		
+	if is_on_floor():
+		startFallY = position.y
+		isFaling = false
+		
 	move_and_slide()

@@ -1,4 +1,7 @@
 extends Control
 
-func die():
+@onready var pointsTxt = $Points
+
+func die(points):
 	visible = true
+	pointsTxt.text = str(points)

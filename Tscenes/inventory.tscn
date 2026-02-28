@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://euoi4f3ljuqa" path="res://Assets/iron_raw.png" id="3_pd81g"]
 [ext_resource type="Texture2D" uid="uid://c6oowf377t3lk" path="res://Assets/iron_smelted.png" id="4_j22fr"]
 [ext_resource type="Texture2D" uid="uid://dbst0pkmtio0u" path="res://Assets/rock_item.png" id="5_pd81g"]
+[ext_resource type="FontFile" uid="uid://shjp5keyxo53" path="res://Assets/Fonts/JetBrainsMono-Medium.ttf" id="6_amss0"]
 [ext_resource type="TileSet" uid="uid://r7a2ib7xewty" path="res://Other/structuresGuiTileset.tres" id="6_j22fr"]
 [ext_resource type="Texture2D" uid="uid://dxxf6ub4fo60w" path="res://Assets/BarBack.png" id="7_6e5e6"]
 [ext_resource type="Texture2D" uid="uid://dk3pyd3bw6d5j" path="res://Assets/BarFront.png" id="8_114ii"]
@@ -35,6 +36,7 @@ offset_left = 25.0
 offset_top = 3.0
 offset_right = 30.0
 offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
 text = "0"
 
@@ -43,6 +45,7 @@ offset_left = 25.0
 offset_top = 17.0
 offset_right = 30.0
 offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
 text = "0"
 
@@ -51,6 +54,7 @@ offset_left = 25.0
 offset_top = 29.0
 offset_right = 30.0
 offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
 text = "0"
 
@@ -59,6 +63,7 @@ offset_left = 25.0
 offset_top = 40.0
 offset_right = 52.0
 offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
 text = "0"
 
@@ -72,24 +77,27 @@ offset_left = 2.0
 offset_top = 66.0
 offset_right = 14.0
 offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
-text = "1 <"
+text = "1<"
 
 [node name="Label2" type="Label" parent="BlockPicker" unique_id=213254940]
 offset_left = 2.0
 offset_top = 82.0
 offset_right = 14.0
 offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
-text = "2 v"
+text = "2v"
 
 [node name="Label3" type="Label" parent="BlockPicker" unique_id=1844516684]
-offset_left = 1.0
+offset_left = 2.0
 offset_top = 98.0
-offset_right = 13.0
+offset_right = 14.0
 offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
-text = "3 <"
+text = "3<"
 
 [node name="Bar" type="TextureProgressBar" parent="." unique_id=1576020821]
 offset_left = 40.0
@@ -116,5 +124,6 @@ offset_left = 49.0
 offset_top = 79.0
 offset_right = 66.0
 offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
 text = "0"

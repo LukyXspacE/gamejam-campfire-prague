@@ -11,6 +11,7 @@ unique_name_in_owner = true
 
 [node name="Map" parent="." unique_id=905556363 instance=ExtResource("3_olq18")]
 unique_name_in_owner = true
+position = Vector2(-114, 14)
 
 [node name="Station" parent="." unique_id=898756571 instance=ExtResource("3_tjfnl")]
-position = Vector2(-41, -215)
+position = Vector2(-42, -208)
