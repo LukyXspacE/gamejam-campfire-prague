@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cyhl25r8pqal6" path="res://Assets/uran.png" id="2_xmt1a"]
 [ext_resource type="Texture2D" uid="uid://euoi4f3ljuqa" path="res://Assets/iron_raw.png" id="3_pd81g"]
 [ext_resource type="Texture2D" uid="uid://c6oowf377t3lk" path="res://Assets/iron_smelted.png" id="4_j22fr"]
+[ext_resource type="Texture2D" uid="uid://dbst0pkmtio0u" path="res://Assets/rock_item.png" id="5_pd81g"]
 
 [node name="Inventory" type="Node2D" unique_id=647542133]
 script = ExtResource("1_aoq13")
@@ -19,6 +20,10 @@ texture = ExtResource("3_pd81g")
 [node name="SpriteIronCoocked" type="Sprite2D" parent="." unique_id=1549871008]
 position = Vector2(8, 35)
 texture = ExtResource("4_j22fr")
+
+[node name="SpriteRock" type="Sprite2D" parent="." unique_id=514490437]
+position = Vector2(8, 47)
+texture = ExtResource("5_pd81g")
 
 [node name="LabelUran" type="Label" parent="." unique_id=476578955]
 offset_left = 22.0
@@ -41,5 +46,13 @@ offset_left = 22.0
 offset_top = 29.0
 offset_right = 27.0
 offset_bottom = 41.0
+theme_override_font_sizes/font_size = 8
+text = "0"
+
+[node name="LabelRock" type="Label" parent="." unique_id=1899298309]
+offset_left = 22.0
+offset_top = 41.0
+offset_right = 49.0
+offset_bottom = 54.0
 theme_override_font_sizes/font_size = 8
 text = "0"

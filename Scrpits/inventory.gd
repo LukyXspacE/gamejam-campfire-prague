@@ -1,17 +1,22 @@
 extends Node2D
 
 @onready var cam = %Cam
-const OFFSET = Vector2(-73, -41)
+const OFFSET = Vector2(-96, -54)
 
 @onready var uranTxt = $LabelUran
 @onready var ironTxt = $LabelIronCoocke
 @onready var ironRawTxt = $LabeIronRaw
+@onready var rockTxt = $LabelRock
 
 var uranium = 0
 var ironRaw = 0
 var iron = 0
+var rock = 0
 
 func addResource(id):
+	if id == 0:
+		rock += 1
+		rockTxt.text = str(rock)
 	if id == 1:
 		iron += 1
 		ironTxt.text = str(iron)

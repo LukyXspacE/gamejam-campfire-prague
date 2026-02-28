@@ -49,10 +49,10 @@ shape = SubResource("CapsuleShape2D_742h5")
 
 [node name="Cam" type="Camera2D" parent="." unique_id=767877867]
 unique_name_in_owner = true
-zoom = Vector2(8, 8)
+zoom = Vector2(6, 6)
 position_smoothing_enabled = true
 
 [node name="Inventory" parent="Cam" unique_id=647542133 instance=ExtResource("3_ronfq")]
 unique_name_in_owner = true
 z_index = 1000
-position = Vector2(-73, -41)
+position = Vector2(-96, -54)
