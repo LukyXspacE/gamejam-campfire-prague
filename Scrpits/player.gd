@@ -9,6 +9,7 @@ const SLIPPERY_INDEX = 2
 @onready var map = %Map
 @onready var bp = %Inventory/BlockPicker
 @onready var gameOver = $Cam/GameOverScreen
+@onready var cam = $Cam
 
 var oxygen = float(100.0)
 
@@ -87,9 +88,13 @@ func _physics_process(delta: float) -> void:
 	if oxygen <= 0 or (abs(position.y - startFallY) > 160 and isFaling and is_on_floor()):
 		gameOver.die(inventory.money)
 		isDead = true
+		cam.zoom.x = 1.0
+		cam.zoom.y = 1.0
 		
 	if is_on_floor():
 		startFallY = position.y
 		isFaling = false
+
+
 		
 	move_and_slide()

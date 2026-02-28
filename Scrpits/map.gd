@@ -5,6 +5,7 @@ extends TileMapLayer
 @onready var mineSound = $MineSound
 
 var currentBlockPlace = Vector2i(0, 0)
+var controlerInUse = false
 
 func setCurrentBlockPlace(value):
 	currentBlockPlace = value
@@ -96,7 +97,7 @@ func addResource(id):
 
 func _input(event: InputEvent) -> void:
 	
-	if event.is_action_pressed("Mine") and not player.isDead:
+	if event.is_action_pressed("Mine") and not player.isDead and not controlerInUse:
 		var mouse_pos = get_local_mouse_position()
 		var cell = local_to_map(mouse_pos)
 		
@@ -110,9 +111,24 @@ func _input(event: InputEvent) -> void:
 				mineSound.play()
 				updateBlocks(cell)
 	
-	if event.is_action_pressed("Build") and not player.isDead:
+	if event.is_action_pressed("Build") and not player.isDead and not controlerInUse:
 		var mouse_pos = get_local_mouse_position()
 		var cell = local_to_map(mouse_pos)
 		if get_cell_source_id(cell) == -1 and player.canPlace():
 			set_cell(cell, 1, currentBlockPlace)
 			player.place(1)
+			
+	if event.is_action_pressed("SelectUp") and not player.isDead:
+		if event.is_action_pressed("Mine") and not player.isDead:
+			var player_pos = player.global_position            # player's world position
+			var tile_pos = local_to_map(player_pos)  # convert to TileMap coords
+			var cell = tile_pos + Vector2i(0, -1)      # one tile above
+			var data = get_cell_source_id(cell)
+		
+			addResource(data)
+		
+			if get_cell_source_id(cell) != 5 or 6:
+				erase_cell(cell)
+				if get_cell_source_id(cell) != 1 or -1:
+					mineSound.play()
+					updateBlocks(cell)

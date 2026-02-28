@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ds3lw71e3pp4l" path="res://Scrpits/game_over_screen.gd" id="1_6ouvo"]
 [ext_resource type="FontFile" uid="uid://shjp5keyxo53" path="res://Assets/Fonts/JetBrainsMono-Medium.ttf" id="1_lc3tr"]
+[ext_resource type="Texture2D" uid="uid://b7cdgt163o13g" path="res://Assets/Skull.png" id="2_i3a2g"]
 [ext_resource type="Texture2D" uid="uid://pruup1yq2eo1" path="res://Assets/coin.png" id="3_r1e76"]
+[ext_resource type="AudioStream" uid="uid://do364xbar25i8" path="res://Sounds/Scare.mp3" id="5_nxtht"]
 
 [node name="GameOverScreen" type="Control" unique_id=757181675]
 visible = false
@@ -22,11 +24,16 @@ anchor_left = -11.014001
 anchor_top = -1.5730001
 anchor_right = -11.014001
 anchor_bottom = -1.5730001
-offset_left = -280.32794
-offset_top = -179.80199
-offset_right = 389.67206
-offset_bottom = 333.198
+offset_left = -520.32794
+offset_top = -224.80199
+offset_right = 733.67206
+offset_bottom = 566.198
 color = Color(0, 0, 0, 1)
+
+[node name="Skull" type="Sprite2D" parent="." unique_id=1019914507]
+position = Vector2(-442, 6)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_i3a2g")
 
 [node name="Txt" type="Label" parent="." unique_id=872140503]
 layout_mode = 1
@@ -35,35 +42,67 @@ anchor_left = -11.000001
 anchor_top = -1.5710001
 anchor_right = -11.000001
 anchor_bottom = -1.5710001
-offset_left = 6.1035156e-05
-offset_top = -0.053985596
-offset_right = 70.00006
-offset_bottom = 112.946014
+offset_left = -76.99994
+offset_top = -44.053986
+offset_right = 48.00006
+offset_bottom = 15.946014
+scale = Vector2(3, 3)
 theme_override_constants/line_spacing = -3
 theme_override_fonts/font = ExtResource("1_lc3tr")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "End of Mining
-   .-=-=-.
-  /       \\
- |         |
- | )     ( |
- \\/ .\\ /. \\/
- (    ^    )
-  |.     .|
-  ||xxxxx||
-  '-._._.-'
+
 "
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=740025480]
-position = Vector2(-450, -178)
-scale = Vector2(2, 2)
+position = Vector2(-275, -157)
+scale = Vector2(4, 4)
 texture = ExtResource("3_r1e76")
 
 [node name="Points" type="Label" parent="." unique_id=961373534]
 layout_mode = 0
-offset_left = -459.0
-offset_top = -168.0
-offset_right = -419.0
-offset_bottom = -145.0
+offset_left = -298.0
+offset_top = -134.0
+offset_right = -258.0
+offset_bottom = -111.0
+scale = Vector2(2, 2)
 theme_override_fonts/font = ExtResource("1_lc3tr")
 text = "67"
+
+[node name="Label" type="Label" parent="." unique_id=1278732904]
+visible = false
+layout_mode = 0
+offset_left = 67.0
+offset_top = 95.0
+offset_right = 586.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0.7841172, 2.2862107e-06, 9.62615e-07, 1)
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = ExtResource("1_lc3tr")
+theme_override_font_sizes/font_size = 8
+text = "
+                                _,.-----.,_
+                             ,-~           ~-.
+                           ,^___           ___^.
+                          /~\"   ~\"   .   \"~   \"~\\
+                         Y  ,--._    I    _.--.  Y
+                         | Y     ~-. | ,-~     Y |
+                         | |        }:{        | |
+                         j l       / | \\       ! l
+                      .-~  (__,.--\" .^. \"--.,__)  ~-.
+                     (           / / | \\ \\           )
+                      \\.____,   ~  \\/\"\\/  ~   .____,/
+                       ^.____                 ____.^
+                          | |T ~\\  !   !  /~ T| |
+                          | |l   _ _ _ _ _   !| |
+                          | l \\/V V V V V V\\/ j |
+                          l  \\ \\|_|_|_|_|_|/ /  !
+                           \\  \\[T T T T T TI/  /
+                            \\  `^-^-^-^-^-^'  /
+                             \\               / 
+                              \\.           ,/
+                                \"^-.___,-^\""
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1342625016]
+stream = ExtResource("5_nxtht")
+volume_db = 24.0

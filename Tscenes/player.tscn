@@ -58,7 +58,8 @@ z_index = 1000
 position = Vector2(-96, -54)
 
 [node name="GameOverScreen" parent="Cam" unique_id=757181675 instance=ExtResource("4_j1iw4")]
-offset_left = 498.0
-offset_top = 146.0
-offset_right = 546.0
-offset_bottom = 272.0
+visible = false
+offset_left = 436.0
+offset_top = 9.0
+offset_right = 484.0
+offset_bottom = 135.0
