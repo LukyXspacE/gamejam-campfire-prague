@@ -45,11 +45,11 @@ func syncText():
 func smelt():
 	var i = 0
 	
-	while i < uranium:
-		ironRaw -= 1
+	while i < uranium and i < iron:
 		uranium -= 1
+		ironRaw -= 2
 		syncText()
-		iron += 1
+		iron += 2
 		syncText()
 		i += 1
 

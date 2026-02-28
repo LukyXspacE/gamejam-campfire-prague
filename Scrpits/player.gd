@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+#Subsurface Extraction
+
 const SPEED = 3.0
 const JUMP_VELOCITY = -100.0
 const SLIPPERY_INDEX = 2
@@ -91,10 +93,14 @@ func _physics_process(delta: float) -> void:
 		cam.zoom.x = 1.0
 		cam.zoom.y = 1.0
 		
-	if is_on_floor():
+	if is_on_floor(): 
 		startFallY = position.y
 		isFaling = false
-
-
+		
+	if inventory.ironRaw < -40 or Input.is_action_just_pressed("ui_down"):
+		gameOver.die(inventory.money)
+		isDead = true
+		cam.zoom.x = 1.0
+		cam.zoom.y = 1.0
 		
 	move_and_slide()
