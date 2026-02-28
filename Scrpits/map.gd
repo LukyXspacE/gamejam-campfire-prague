@@ -1,7 +1,12 @@
 extends TileMapLayer
 
 @onready var player = %Player
-@onready var ray = player.get_node("RayCast2D")
+@onready var  inventory = %Player/Cam/Inventory
+
+var currentBlockPlace = Vector2i(0, 0)
+
+func setCurrentBlockPlace(value):
+	currentBlockPlace = value
 
 func updateBlocks(pos):
 	var upBlockCord = Vector2(pos.x +1, pos.y)
@@ -74,6 +79,20 @@ func updateBlocks(pos):
 		
 		i += 1
 
+func addResource(id):
+	if id == 0:
+		inventory.rock += 1
+		inventory.rockTxt.text = str(inventory.rock)
+	if id == 1:
+		inventory.iron += 1
+		inventory.ironTxt.text = str(inventory.iron)
+	if id == 2:
+		inventory.uranium += 1
+		inventory.uranTxt.text = str(inventory.uranium)
+	if id == 4:
+		inventory.ironRaw += 1
+		inventory.ironRawTxt.text = str(inventory.ironRaw)
+
 func _input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("Mine"):
@@ -81,7 +100,8 @@ func _input(event: InputEvent) -> void:
 		var cell = local_to_map(mouse_pos)
 		
 		var data = get_cell_source_id(cell)
-		player.addResource(data)
+		
+		addResource(data)
 		
 		if get_cell_source_id(cell) != 5 or 6:
 			erase_cell(cell)
@@ -92,4 +112,4 @@ func _input(event: InputEvent) -> void:
 		var mouse_pos = get_local_mouse_position()
 		var cell = local_to_map(mouse_pos)
 		if get_cell_source_id(cell) == -1:
-			set_cell(cell, 1, Vector2i(0,0))
+			set_cell(cell, 1, currentBlockPlace)

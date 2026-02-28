@@ -3,6 +3,8 @@ extends Node2D
 @onready var cam = %Cam
 const OFFSET = Vector2(-96, -54)
 
+@onready var bp = $bl
+
 @onready var uranTxt = $LabelUran
 @onready var ironTxt = $LabelIronCoocke
 @onready var ironRawTxt = $LabeIronRaw

@@ -9,4 +9,5 @@
 unique_name_in_owner = true
 
 [node name="Map" parent="." unique_id=905556363 instance=ExtResource("3_olq18")]
+unique_name_in_owner = true
 position = Vector2(-112, 26)
