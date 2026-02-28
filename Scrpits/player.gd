@@ -8,10 +8,13 @@ const SLIPPERY_INDEX = 2
 @onready var inventory = %Inventory
 @onready var map = %Map
 @onready var bp = %Inventory/BlockPicker
+@onready var gameOver = $Cam/GameOverScreen
 
 var oxygen = float(100.0)
 
 var playerInside := false
+
+var isDead = false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action("Place1"):
@@ -44,15 +47,15 @@ func place(value):
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and not isDead:
 		velocity += get_gravity() * delta * 0.18
 
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and is_on_floor() and not isDead:
 		velocity.y = JUMP_VELOCITY
 
 	var direction := Input.get_axis("Left", "Right")
-	if direction:
+	if direction and not isDead:
 		velocity.x += direction * SPEED	
 	else:
 		velocity.x = 0
@@ -75,4 +78,8 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed("Sell") and playerInside:
 		inventory.sell()
+		
+	if oxygen <= 0:
+		gameOver.die()
+		isDead = true
 	move_and_slide()

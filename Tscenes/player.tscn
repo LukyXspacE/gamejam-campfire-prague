@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dj2h72sauqh3c" path="res://Scrpits/player.gd" id="1_xqxdq"]
 [ext_resource type="Texture2D" uid="uid://bp5c6cek06yi4" path="res://Assets/astroguy.png" id="2_xqxdq"]
 [ext_resource type="PackedScene" uid="uid://c8qy2dtxqo5ub" path="res://Tscenes/inventory.tscn" id="3_ronfq"]
+[ext_resource type="PackedScene" uid="uid://dxlwralhg05wq" path="res://Tscenes/game_over_screen.tscn" id="4_j1iw4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptprp"]
 atlas = ExtResource("2_xqxdq")
@@ -55,3 +56,9 @@ position_smoothing_enabled = true
 unique_name_in_owner = true
 z_index = 1000
 position = Vector2(-96, -54)
+
+[node name="GameOverScreen" parent="Cam" unique_id=757181675 instance=ExtResource("4_j1iw4")]
+offset_left = 498.0
+offset_top = 146.0
+offset_right = 546.0
+offset_bottom = 272.0

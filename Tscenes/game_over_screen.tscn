@@ -1,9 +1,55 @@
 [gd_scene format=3 uid="uid://dxlwralhg05wq"]
 
+[ext_resource type="Script" uid="uid://ds3lw71e3pp4l" path="res://Scrpits/game_over_screen.gd" id="1_6ouvo"]
+[ext_resource type="FontFile" uid="uid://shjp5keyxo53" path="res://Assets/Fonts/JetBrainsMono-Medium.ttf" id="1_lc3tr"]
+
 [node name="GameOverScreen" type="Control" unique_id=757181675]
+visible = false
+z_index = 2000
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_left = 528.0
+offset_top = 198.0
+offset_right = 576.0
+offset_bottom = 324.0
+script = ExtResource("1_6ouvo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2117754649]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -11.014001
+anchor_top = -1.5730001
+anchor_right = -11.014001
+anchor_bottom = -1.5730001
+offset_left = -280.32794
+offset_top = -179.80199
+offset_right = 389.67206
+offset_bottom = 333.198
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=872140503]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -11.000001
+anchor_top = -1.5710001
+anchor_right = -11.000001
+anchor_bottom = -1.5710001
+offset_left = 6.1035156e-05
+offset_top = -0.053985596
+offset_right = 70.00006
+offset_bottom = 112.946014
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = ExtResource("1_lc3tr")
+theme_override_font_sizes/font_size = 8
+text = "End of Mining
+ 
+   .-=-=-.
+  /       \\
+ |         |
+ | )     ( |
+ \\/ .\\ /. \\/
+ (    ^    )
+  |.     .|
+  ||xxxxx||
+  '-._._.-'
+"

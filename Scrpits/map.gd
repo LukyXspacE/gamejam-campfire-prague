@@ -96,7 +96,7 @@ func addResource(id):
 
 func _input(event: InputEvent) -> void:
 	
-	if event.is_action_pressed("Mine"):
+	if event.is_action_pressed("Mine") and not player.isDead:
 		var mouse_pos = get_local_mouse_position()
 		var cell = local_to_map(mouse_pos)
 		
@@ -110,7 +110,7 @@ func _input(event: InputEvent) -> void:
 				mineSound.play()
 				updateBlocks(cell)
 	
-	if event.is_action_pressed("Build"):
+	if event.is_action_pressed("Build") and not player.isDead:
 		var mouse_pos = get_local_mouse_position()
 		var cell = local_to_map(mouse_pos)
 		if get_cell_source_id(cell) == -1 and player.canPlace():
