@@ -2,6 +2,7 @@ extends TileMapLayer
 
 @onready var player = %Player
 @onready var  inventory = %Player/Cam/Inventory
+@onready var mineSound = $MineSound
 
 var currentBlockPlace = Vector2i(0, 0)
 
@@ -105,11 +106,13 @@ func _input(event: InputEvent) -> void:
 		
 		if get_cell_source_id(cell) != 5 or 6:
 			erase_cell(cell)
-			if get_cell_source_id(cell) != 1:
+			if get_cell_source_id(cell) != 1 or -1:
+				mineSound.play()
 				updateBlocks(cell)
 	
 	if event.is_action_pressed("Build"):
 		var mouse_pos = get_local_mouse_position()
 		var cell = local_to_map(mouse_pos)
-		if get_cell_source_id(cell) == -1:
+		if get_cell_source_id(cell) == -1 and player.canPlace():
 			set_cell(cell, 1, currentBlockPlace)
+			player.place(1)

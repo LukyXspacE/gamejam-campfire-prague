@@ -32,10 +32,20 @@ func _input(event: InputEvent) -> void:
 		bp.erase_cell(Vector2i(1, 5))
 		map.setCurrentBlockPlace(Vector2i(2,0))
 
+func canPlace() -> bool:
+	if inventory.iron > 0:
+		return true
+	else:
+		return false
+
+func place(value):
+	inventory.iron -= value
+	inventory.syncText()
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta * 0.2
+		velocity += get_gravity() * delta * 0.18
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -59,5 +69,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		oxygen -= 0.02
 	inventory.updateO2(oxygen)
-
+	
+	if Input.is_action_pressed("Smelt") and playerInside:
+		inventory.smelt()
+	
+	if Input.is_action_pressed("Sell") and playerInside:
+		inventory.sell()
 	move_and_slide()
