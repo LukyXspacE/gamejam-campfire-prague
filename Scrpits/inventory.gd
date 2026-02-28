@@ -4,6 +4,7 @@ extends Node2D
 const OFFSET = Vector2(-96, -54)
 
 @onready var bp = $bl
+@onready var o2bar = $Bar
 
 @onready var uranTxt = $LabelUran
 @onready var ironTxt = $LabelIronCoocke
@@ -14,6 +15,9 @@ var uranium = 0
 var ironRaw = 0
 var iron = 0
 var rock = 0
+
+func updateO2(value):
+	o2bar.value = value
 
 func addResource(id):
 	if id == 0:
@@ -31,3 +35,4 @@ func addResource(id):
 
 func _process(delta: float) -> void:
 	global_position = cam.get_screen_center_position() + OFFSET
+	

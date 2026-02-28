@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://i72bvpsldfq6"]
+
+[ext_resource type="Script" uid="uid://bdl22dledjgb2" path="res://Scrpits/station.gd" id="1_7o0uk"]
+[ext_resource type="Texture2D" uid="uid://bd56keiklp17v" path="res://Assets/Station.png" id="1_11w1h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o0uk"]
+size = Vector2(38, 96)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c8ltq"]
+radius = 49.0
+height = 158.0
+
+[node name="Station" type="StaticBody2D" unique_id=898756571]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=301776156]
+z_index = -10
+texture = ExtResource("1_11w1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=404779460]
+shape = SubResource("RectangleShape2D_7o0uk")
+
+[node name="Interact" type="Area2D" parent="." unique_id=1433334167]
+priority = 1
+script = ExtResource("1_7o0uk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact" unique_id=1953563952]
+shape = SubResource("CapsuleShape2D_c8ltq")
+
+[node name="Label" type="Label" parent="." unique_id=1873205863]
+offset_left = 51.0
+offset_top = -7.0
+offset_right = 113.0
+offset_bottom = 20.0
+theme_override_font_sizes/font_size = 8
+text = "Press B to smelt
+Press Y to sell"
+
+[connection signal="body_entered" from="Interact" to="Interact" method="_on_body_entered"]
+[connection signal="body_exited" from="Interact" to="Interact" method="_on_body_exited"]

@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c6oowf377t3lk" path="res://Assets/iron_smelted.png" id="4_j22fr"]
 [ext_resource type="Texture2D" uid="uid://dbst0pkmtio0u" path="res://Assets/rock_item.png" id="5_pd81g"]
 [ext_resource type="TileSet" uid="uid://r7a2ib7xewty" path="res://Other/structuresGuiTileset.tres" id="6_j22fr"]
+[ext_resource type="Texture2D" uid="uid://dxxf6ub4fo60w" path="res://Assets/BarBack.png" id="7_6e5e6"]
+[ext_resource type="Texture2D" uid="uid://dk3pyd3bw6d5j" path="res://Assets/BarFront.png" id="8_114ii"]
+[ext_resource type="Texture2D" uid="uid://28grrkssixjq" path="res://Assets/iconoxy.png" id="9_114ii"]
 
 [node name="Inventory" type="Node2D" unique_id=647542133]
 script = ExtResource("1_aoq13")
@@ -27,34 +30,34 @@ position = Vector2(8, 47)
 texture = ExtResource("5_pd81g")
 
 [node name="LabelUran" type="Label" parent="." unique_id=476578955]
-offset_left = 22.0
-offset_top = 2.0
-offset_right = 27.0
-offset_bottom = 14.0
+offset_left = 25.0
+offset_top = 3.0
+offset_right = 30.0
+offset_bottom = 15.0
 theme_override_font_sizes/font_size = 8
 text = "0"
 
 [node name="LabeIronRaw" type="Label" parent="." unique_id=1413898642]
-offset_left = 22.0
-offset_top = 15.0
-offset_right = 27.0
-offset_bottom = 27.0
+offset_left = 25.0
+offset_top = 17.0
+offset_right = 30.0
+offset_bottom = 29.0
 theme_override_font_sizes/font_size = 8
 text = "0"
 
 [node name="LabelIronCoocke" type="Label" parent="." unique_id=1408705778]
-offset_left = 22.0
+offset_left = 25.0
 offset_top = 29.0
-offset_right = 27.0
+offset_right = 30.0
 offset_bottom = 41.0
 theme_override_font_sizes/font_size = 8
 text = "0"
 
 [node name="LabelRock" type="Label" parent="." unique_id=1899298309]
-offset_left = 22.0
-offset_top = 41.0
-offset_right = 49.0
-offset_bottom = 54.0
+offset_left = 25.0
+offset_top = 40.0
+offset_right = 52.0
+offset_bottom = 53.0
 theme_override_font_sizes/font_size = 8
 text = "0"
 
@@ -86,3 +89,19 @@ offset_right = 13.0
 offset_bottom = 110.0
 theme_override_font_sizes/font_size = 8
 text = "3 <"
+
+[node name="Bar" type="TextureProgressBar" parent="." unique_id=1576020821]
+offset_left = 40.0
+offset_top = 94.0
+offset_right = 142.0
+offset_bottom = 134.0
+scale = Vector2(0.5, 0.5)
+value = 67.0
+rounded = true
+texture_under = ExtResource("7_6e5e6")
+texture_progress = ExtResource("8_114ii")
+
+[node name="SpriteO2" type="Sprite2D" parent="." unique_id=1867533275]
+position = Vector2(35, 98)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_114ii")

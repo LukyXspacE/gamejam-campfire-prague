@@ -28,23 +28,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_742h5"]
 radius = 2.0
 height = 14.0
 
-[node name="Player" type="CharacterBody2D" unique_id=959210951]
+[node name="Player" type="CharacterBody2D" unique_id=959210951 groups=["player"]]
+z_index = 1000
 script = ExtResource("1_xqxdq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=180504346]
 sprite_frames = SubResource("SpriteFrames_1ver7")
 animation = &"walk"
-frame = 1
-frame_progress = 0.60842794
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1669056824]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1669056824 groups=["player"]]
 shape = SubResource("CapsuleShape2D_742h5")
 
 [node name="Cam" type="Camera2D" parent="." unique_id=767877867]

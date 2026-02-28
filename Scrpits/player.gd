@@ -9,6 +9,10 @@ const SLIPPERY_INDEX = 2
 @onready var map = %Map
 @onready var bp = %Inventory/BlockPicker
 
+var oxygen = float(100.0)
+
+var playerInside := false
+
 func _input(event: InputEvent) -> void:
 	if event.is_action("Place1"):
 		bp.set_cell(Vector2i(1, 4), 1, Vector2i(0,0))
@@ -46,5 +50,14 @@ func _physics_process(delta: float) -> void:
 	if direction != 0:
 		sprite.play("walk")
 		sprite.flip_h = direction < 0 
+	else:
+		sprite.stop()
+		
+	
+	if playerInside and oxygen <= 100.0:
+		oxygen += 0.2
+	else:
+		oxygen -= 0.02
+	inventory.updateO2(oxygen)
 
 	move_and_slide()
