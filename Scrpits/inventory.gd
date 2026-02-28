@@ -23,7 +23,7 @@ func addResource(id):
 	if id == 2:
 		uranium += 1
 		uranTxt.text = str(uranium)
-	if id == 3:
+	if id == 4:
 		ironRaw += 1
 		ironRawTxt.text = str(ironRaw)
 

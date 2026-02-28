@@ -83,9 +83,10 @@ func _input(event: InputEvent) -> void:
 		var data = get_cell_source_id(cell)
 		player.addResource(data)
 		
-		erase_cell(cell)
-		if get_cell_source_id(cell) != 1:
-			updateBlocks(cell)
+		if get_cell_source_id(cell) != 5 or 6:
+			erase_cell(cell)
+			if get_cell_source_id(cell) != 1:
+				updateBlocks(cell)
 	
 	if event.is_action_pressed("Build"):
 		var mouse_pos = get_local_mouse_position()
