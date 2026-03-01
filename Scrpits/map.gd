@@ -1,7 +1,7 @@
 extends TileMapLayer
 
 @onready var player = %Player
-@onready var  inventory = %Player/Cam/Inventorya
+@onready var  inventory = %Player/Cam/Inventory
 @onready var mineSound = $MineSound
 
 var currentBlockPlace = Vector2i(0, 0)

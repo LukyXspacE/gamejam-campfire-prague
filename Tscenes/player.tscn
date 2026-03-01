@@ -66,10 +66,6 @@ position_smoothing_enabled = true
 [node name="Inventory" parent="Cam" unique_id=647542133 instance=ExtResource("3_ronfq")]
 unique_name_in_owner = true
 z_index = 1000
-offset_left = -96.178276
-offset_top = -53.999996
-offset_right = -96.178276
-offset_bottom = -53.999996
 
 [node name="GameOverScreen" parent="Cam" unique_id=757181675 instance=ExtResource("4_j1iw4")]
 visible = false
