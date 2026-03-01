@@ -16,7 +16,7 @@ var uranium = 0
 var ironRaw = 0
 var iron = 99
 var diamond = 0
-var money = 999
+var money = 0
 
 func updateO2(value):
 	o2bar.value = value

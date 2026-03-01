@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cyhl25r8pqal6" path="res://Assets/uran.png" id="2_xmt1a"]
 [ext_resource type="Texture2D" uid="uid://euoi4f3ljuqa" path="res://Assets/iron_raw.png" id="3_pd81g"]
 [ext_resource type="Texture2D" uid="uid://c6oowf377t3lk" path="res://Assets/iron_smelted.png" id="4_j22fr"]
-[ext_resource type="Texture2D" uid="uid://dbst0pkmtio0u" path="res://Assets/rock_item.png" id="5_pd81g"]
+[ext_resource type="Texture2D" uid="uid://jv5dubawl1vy" path="res://Assets/diamond_item.png" id="5_amss0"]
 [ext_resource type="FontFile" uid="uid://shjp5keyxo53" path="res://Assets/Fonts/JetBrainsMono-Medium.ttf" id="6_amss0"]
 [ext_resource type="TileSet" uid="uid://r7a2ib7xewty" path="res://Other/structuresGuiTileset.tres" id="6_j22fr"]
 [ext_resource type="Texture2D" uid="uid://dxxf6ub4fo60w" path="res://Assets/BarBack.png" id="7_6e5e6"]
@@ -19,7 +19,7 @@ colors = PackedColorArray(1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_rgf3o"]
 gradient = SubResource("Gradient_amss0")
 
-[node name="Inventory" type="Node2D" unique_id=647542133]
+[node name="Inventory" type="Node2D" unique_id=527841518]
 z_index = 2000
 script = ExtResource("1_aoq13")
 
@@ -38,10 +38,10 @@ z_index = 2000
 position = Vector2(8, 35)
 texture = ExtResource("4_j22fr")
 
-[node name="SpriteRock" type="Sprite2D" parent="." unique_id=514490437]
+[node name="SpriteDiamond" type="Sprite2D" parent="." unique_id=514490437]
 z_index = 2000
 position = Vector2(8, 47)
-texture = ExtResource("5_pd81g")
+texture = ExtResource("5_amss0")
 
 [node name="LabelUran" type="Label" parent="." unique_id=476578955]
 z_index = 2000

@@ -59,19 +59,23 @@ shape = SubResource("CapsuleShape2D_742h5")
 
 [node name="Cam" type="Camera2D" parent="." unique_id=767877867]
 unique_name_in_owner = true
+scale = Vector2(0.99814624, 1)
 zoom = Vector2(6, 6)
 position_smoothing_enabled = true
 
 [node name="Inventory" parent="Cam" unique_id=647542133 instance=ExtResource("3_ronfq")]
 unique_name_in_owner = true
 z_index = 1000
-position = Vector2(-96, -54)
+offset_left = -96.178276
+offset_top = -53.999996
+offset_right = -96.178276
+offset_bottom = -53.999996
 
 [node name="GameOverScreen" parent="Cam" unique_id=757181675 instance=ExtResource("4_j1iw4")]
 visible = false
 offset_left = 436.0
 offset_top = 9.0
-offset_right = 484.0
+offset_right = 483.99997
 offset_bottom = 135.0
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=798445357]

@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="gamejam-campfire"
+config/name="Subsurface-Extraction"
 run/main_scene="uid://bcvv80uhw0hm8"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://c3p5jloikp74k"
 
 [audio]
 
