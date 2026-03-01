@@ -81,20 +81,6 @@ func updateBlocks(pos):
 		
 		i += 1
 
-func addResource(id):
-	if id == 0:
-		inventory.rock += 1
-		inventory.rockTxt.text = str(inventory.rock)
-	if id == 1:
-		inventory.iron += 1
-		inventory.ironTxt.text = str(inventory.iron)
-	if id == 2:
-		inventory.uranium += 1
-		inventory.uranTxt.text = str(inventory.uranium)
-	if id == 4:
-		inventory.ironRaw += 1
-		inventory.ironRawTxt.text = str(inventory.ironRaw)
-
 func _input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("Mine") and not player.isDead and not controlerInUse:
@@ -103,7 +89,7 @@ func _input(event: InputEvent) -> void:
 		
 		var data = get_cell_source_id(cell)
 		
-		addResource(data)
+		inventory.addResource(data)
 		
 		if data not in [5, 6]:
 			erase_cell(cell)
@@ -125,7 +111,7 @@ func _input(event: InputEvent) -> void:
 			var cell = tile_pos + Vector2i(0, -1)      # one tile above
 			var data = get_cell_source_id(cell)
 		
-			addResource(data)
+			#addResource(data)
 		
 			if get_cell_source_id(cell) != 5 or 6:
 				erase_cell(cell)

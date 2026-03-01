@@ -54,6 +54,7 @@ sprite_frames = SubResource("SpriteFrames_1ver7")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1669056824 groups=["player"]]
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_742h5")
 
 [node name="Cam" type="Camera2D" parent="." unique_id=767877867]

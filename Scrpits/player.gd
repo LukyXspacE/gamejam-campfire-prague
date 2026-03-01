@@ -15,6 +15,7 @@ const SLIPPERY_INDEX = 2
 @onready var sun = %DirectionalLight
 
 var oxygen = float(100.0)
+var oxygenLimit = 100.0
 
 var playerInside := false
 
@@ -76,7 +77,7 @@ func _physics_process(delta: float) -> void:
 		sprite.stop()
 		
 	
-	if playerInside and oxygen <= 100.0:
+	if playerInside and oxygen <= oxygenLimit:
 		oxygen += 0.2
 	else:
 		oxygen -= 0.02
@@ -105,5 +106,10 @@ func _physics_process(delta: float) -> void:
 		cam.zoom.x = 1.0
 		cam.zoom.y = 1.0
 		sun.enabled = false
-		
+	
+	if Input.is_action_just_pressed("Upgrade") and playerInside == true and inventory.money >= 50:
+		inventory.o2bar.max_value = 200
+		inventory.money -= 50
+		oxygenLimit += 100
+	
 	move_and_slide()

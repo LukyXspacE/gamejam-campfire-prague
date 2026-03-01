@@ -9,22 +9,22 @@ const OFFSET = Vector2(-96, -54)
 @onready var uranTxt = $LabelUran
 @onready var ironTxt = $LabelIronCoocke
 @onready var ironRawTxt = $LabeIronRaw
-@onready var rockTxt = $LabelRock
+@onready var diamondTxt = $LabelDiamond
 @onready var monetTxt = $LabelBitcoin
 
 var uranium = 0
 var ironRaw = 0
 var iron = 99
-var rock = 0
-var money = 0
+var diamond = 0
+var money = 999
 
 func updateO2(value):
 	o2bar.value = value
 
 func addResource(id):
-	if id == 0:
-		rock += 1
-		rockTxt.text = str(rock)
+	if id == 3:
+		diamond += 1
+		diamondTxt.text = str(diamond)
 	if id == 1:
 		iron += 1
 		ironTxt.text = str(iron)
@@ -36,7 +36,7 @@ func addResource(id):
 		ironRawTxt.text = str(ironRaw)
 
 func syncText():
-	rockTxt.text = str(rock)
+	diamondTxt.text = str(diamond)
 	ironTxt.text = str(iron)
 	uranTxt.text = str(uranium)
 	ironRawTxt.text = str(ironRaw)
@@ -63,8 +63,8 @@ func sell():
 		#syncText()
 		#i += 1
 		
-	while i < 10 and rock > 0:
-		rock -= 1 #1
+	while i < 10 and diamond > 0:
+		diamond -= 1 #1
 		money += 1
 		syncText()
 		i += 1

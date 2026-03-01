@@ -42,16 +42,20 @@ offset_right = 113.0
 offset_bottom = 20.0
 theme_override_font_sizes/font_size = 8
 text = "Press B to smelt
-Press Y to sell"
+Press Y to sell
+Press X to ugrade
+oxygen for 50 bitcoin"
 
 [node name="Lights" type="Node2D" parent="." unique_id=1038190059]
 
 [node name="PointLight2D" type="PointLight2D" parent="Lights" unique_id=150192271]
+visible = false
 scale = Vector2(10, 10)
 texture = SubResource("GradientTexture2D_7o0uk")
 
 [node name="PointLight2D2" type="PointLight2D" parent="Lights" unique_id=1682514206]
-position = Vector2(0, 41.999996)
+visible = false
+position = Vector2(2.9999998, 54)
 scale = Vector2(10, 10)
 color = Color(0.751106, 0.35978, 1.92523e-07, 1)
 texture = SubResource("GradientTexture2D_7o0uk")

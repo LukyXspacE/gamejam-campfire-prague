@@ -73,7 +73,7 @@ theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
 text = "0"
 
-[node name="LabelRock" type="Label" parent="." unique_id=1899298309]
+[node name="LabelDiamond" type="Label" parent="." unique_id=1899298309]
 z_index = 2000
 offset_left = 25.0
 offset_top = 40.0
@@ -91,10 +91,10 @@ tile_set = ExtResource("6_j22fr")
 
 [node name="Bar" type="TextureProgressBar" parent="." unique_id=1576020821]
 z_index = 2000
-offset_left = 69.0
-offset_top = 94.0
-offset_right = 171.0
-offset_bottom = 134.0
+offset_left = 45.0
+offset_top = 95.0
+offset_right = 147.0
+offset_bottom = 135.0
 scale = Vector2(0.5, 0.5)
 value = 67.0
 rounded = true
@@ -103,21 +103,20 @@ texture_progress = ExtResource("8_114ii")
 
 [node name="SpriteO2" type="Sprite2D" parent="." unique_id=1867533275]
 z_index = 2000
-position = Vector2(64, 98)
+position = Vector2(40, 99)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_114ii")
 
 [node name="SpriteBitcoin" type="Sprite2D" parent="." unique_id=1210579320]
 z_index = 2000
-position = Vector2(69, 85)
+position = Vector2(45, 86)
 texture = ExtResource("10_emr1h")
 
 [node name="LabelBitcoin" type="Label" parent="." unique_id=1996378618]
-top_level = true
 z_index = 2000
-offset_left = 78.0
+offset_left = 56.0
 offset_top = 79.0
-offset_right = 95.0
+offset_right = 73.0
 offset_bottom = 91.0
 theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
