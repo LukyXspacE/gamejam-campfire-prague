@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bcvv80uhw0hm8"]
 
 [ext_resource type="PackedScene" uid="uid://djjyc7msi2jyq" path="res://Tscenes/player.tscn" id="1_tamx6"]
-[ext_resource type="PackedScene" uid="uid://c2yf836m2wx20" path="res://Tscenes/map_asteroid.tscn" id="3_olq18"]
+[ext_resource type="PackedScene" uid="uid://c333hyngd1uxf" path="res://Tscenes/map_asteroid.tscn" id="3_olq18"]
 [ext_resource type="PackedScene" uid="uid://i72bvpsldfq6" path="res://Tscenes/station.tscn" id="3_tjfnl"]
 
 [node name="MAIN" type="Node2D" unique_id=1800609232]

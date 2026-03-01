@@ -103,12 +103,12 @@ func _physics_process(delta: float) -> void:
 		startFallY = position.y
 		isFaling = false
 		
-	if inventory.ironRaw < -40 or Input.is_action_just_pressed("ui_down"):
-		gameOver.die(inventory.money)
-		isDead = true
-		cam.zoom.x = 1.0
-		cam.zoom.y = 1.0
-		sun.enabled = false
+	#if inventory.ironRaw < -40 or Input.is_action_just_pressed("ui_down"):
+		#gameOver.die(inventory.money)
+		#isDead = true
+		#cam.zoom.x = 1.0
+		#cam.zoom.y = 1.0
+		#sun.enabled = false
 	
 	if Input.is_action_just_pressed("Upgrade") and playerInside == true and inventory.money >= 30:
 		inventory.o2bar.max_value = 200
