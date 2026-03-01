@@ -1,1 +1,4 @@
 res://Scrpits/inventory.gd
+res://Scrpits/map.gd
+res://Scrpits/player.gd
+res://Tscenes/inventory.tscn
