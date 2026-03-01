@@ -44,7 +44,7 @@ theme_override_font_sizes/font_size = 8
 text = "Press B to smelt
 Press Y to sell
 Press X to ugrade
-oxygen for 50 bitcoin"
+oxygen for 30 bitcoin"
 
 [node name="Lights" type="Node2D" parent="." unique_id=1038190059]
 

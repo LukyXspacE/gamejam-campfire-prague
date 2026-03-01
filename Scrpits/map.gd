@@ -3,6 +3,7 @@ extends TileMapLayer
 @onready var player = %Player
 @onready var  inventory = %Player/Cam/Inventory
 @onready var mineSound = $MineSound
+@onready var placeSound = $PlaceSound
 
 var currentBlockPlace = Vector2i(0, 0)
 var controlerInUse = false
@@ -103,18 +104,4 @@ func _input(event: InputEvent) -> void:
 		if get_cell_source_id(cell) == -1 and player.canPlace():
 			set_cell(cell, 1, currentBlockPlace)
 			player.place(1)
-			
-	if event.is_action_pressed("SelectUp") and not player.isDead:
-		if event.is_action_pressed("Mine") and not player.isDead:
-			var player_pos = player.global_position            # player's world position
-			var tile_pos = local_to_map(player_pos)  # convert to TileMap coords
-			var cell = tile_pos + Vector2i(0, -1)      # one tile above
-			var data = get_cell_source_id(cell)
-		
-			#addResource(data)
-		
-			if get_cell_source_id(cell) != 5 or 6:
-				erase_cell(cell)
-				if get_cell_source_id(cell) != 1 or -1:
-					mineSound.play()
-					updateBlocks(cell)
+			placeSound.play()

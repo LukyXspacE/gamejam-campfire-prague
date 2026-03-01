@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bp5c6cek06yi4" path="res://Assets/astroguy.png" id="2_xqxdq"]
 [ext_resource type="PackedScene" uid="uid://c8qy2dtxqo5ub" path="res://Tscenes/inventory.tscn" id="3_ronfq"]
 [ext_resource type="PackedScene" uid="uid://dxlwralhg05wq" path="res://Tscenes/game_over_screen.tscn" id="4_j1iw4"]
+[ext_resource type="AudioStream" uid="uid://cwrf80mnh7y6c" path="res://Sounds/stepping.mp3" id="5_hh2dt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptprp"]
 atlas = ExtResource("2_xqxdq")
@@ -77,3 +78,8 @@ offset_bottom = 135.0
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=798445357]
 scale = Vector2(10, 10)
 texture = SubResource("GradientTexture2D_hh2dt")
+
+[node name="Step" type="AudioStreamPlayer" parent="." unique_id=721620606]
+stream = ExtResource("5_hh2dt")
+volume_db = -6.7
+pitch_scale = 2.0

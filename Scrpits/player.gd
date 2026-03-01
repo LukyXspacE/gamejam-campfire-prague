@@ -13,6 +13,7 @@ const SLIPPERY_INDEX = 2
 @onready var gameOver = $Cam/GameOverScreen
 @onready var cam = $Cam
 @onready var sun = %DirectionalLight
+@onready var step = $Step
 
 var oxygen = float(100.0)
 var oxygenLimit = 100.0
@@ -23,6 +24,8 @@ var isDead = false
 
 var startFallY = position.y
 var isFaling = false
+
+var isPlayingSound = false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action("Place1"):
@@ -107,9 +110,16 @@ func _physics_process(delta: float) -> void:
 		cam.zoom.y = 1.0
 		sun.enabled = false
 	
-	if Input.is_action_just_pressed("Upgrade") and playerInside == true and inventory.money >= 50:
+	if Input.is_action_just_pressed("Upgrade") and playerInside == true and inventory.money >= 30:
 		inventory.o2bar.max_value = 200
-		inventory.money -= 50
+		inventory.money -= 30
 		oxygenLimit += 100
+	
+	if not isPlayingSound and direction != 0 and is_on_floor() and not isDead:
+		step.play()
+		isPlayingSound = true
+	elif isPlayingSound and direction == 0:
+		step.stop()
+		isPlayingSound = false
 	
 	move_and_slide()
