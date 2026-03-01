@@ -12,26 +12,39 @@
 [ext_resource type="Texture2D" uid="uid://28grrkssixjq" path="res://Assets/iconoxy.png" id="9_114ii"]
 [ext_resource type="Texture2D" uid="uid://pruup1yq2eo1" path="res://Assets/coin.png" id="10_emr1h"]
 
+[sub_resource type="Gradient" id="Gradient_amss0"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rgf3o"]
+gradient = SubResource("Gradient_amss0")
+
 [node name="Inventory" type="Node2D" unique_id=647542133]
+z_index = 2000
 script = ExtResource("1_aoq13")
 
 [node name="SpriteUran" type="Sprite2D" parent="." unique_id=1233349270]
+z_index = 2000
 position = Vector2(8, 8)
 texture = ExtResource("2_xmt1a")
 
 [node name="SpriteIronRaw" type="Sprite2D" parent="." unique_id=1198730416]
+z_index = 2000
 position = Vector2(8, 22)
 texture = ExtResource("3_pd81g")
 
 [node name="SpriteIronCoocked" type="Sprite2D" parent="." unique_id=1549871008]
+z_index = 2000
 position = Vector2(8, 35)
 texture = ExtResource("4_j22fr")
 
 [node name="SpriteRock" type="Sprite2D" parent="." unique_id=514490437]
+z_index = 2000
 position = Vector2(8, 47)
 texture = ExtResource("5_pd81g")
 
 [node name="LabelUran" type="Label" parent="." unique_id=476578955]
+z_index = 2000
 offset_left = 25.0
 offset_top = 3.0
 offset_right = 30.0
@@ -41,6 +54,7 @@ theme_override_font_sizes/font_size = 8
 text = "0"
 
 [node name="LabeIronRaw" type="Label" parent="." unique_id=1413898642]
+z_index = 2000
 offset_left = 25.0
 offset_top = 17.0
 offset_right = 30.0
@@ -50,6 +64,7 @@ theme_override_font_sizes/font_size = 8
 text = "0"
 
 [node name="LabelIronCoocke" type="Label" parent="." unique_id=1408705778]
+z_index = 2000
 offset_left = 25.0
 offset_top = 29.0
 offset_right = 30.0
@@ -59,6 +74,7 @@ theme_override_font_sizes/font_size = 8
 text = "0"
 
 [node name="LabelRock" type="Label" parent="." unique_id=1899298309]
+z_index = 2000
 offset_left = 25.0
 offset_top = 40.0
 offset_right = 52.0
@@ -68,41 +84,16 @@ theme_override_font_sizes/font_size = 8
 text = "0"
 
 [node name="BlockPicker" type="TileMapLayer" parent="." unique_id=236852381]
-position = Vector2(2, -11)
+z_index = 2000
+position = Vector2(4, -10)
 tile_map_data = PackedByteArray(0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 2, 0, 0, 0, 0, 0)
 tile_set = ExtResource("6_j22fr")
 
-[node name="Label1" type="Label" parent="BlockPicker" unique_id=316270635]
-offset_left = 2.0
-offset_top = 66.0
-offset_right = 14.0
-offset_bottom = 78.0
-theme_override_fonts/font = ExtResource("6_amss0")
-theme_override_font_sizes/font_size = 8
-text = "1<"
-
-[node name="Label2" type="Label" parent="BlockPicker" unique_id=213254940]
-offset_left = 2.0
-offset_top = 82.0
-offset_right = 14.0
-offset_bottom = 94.0
-theme_override_fonts/font = ExtResource("6_amss0")
-theme_override_font_sizes/font_size = 8
-text = "2v"
-
-[node name="Label3" type="Label" parent="BlockPicker" unique_id=1844516684]
-offset_left = 2.0
-offset_top = 98.0
-offset_right = 14.0
-offset_bottom = 110.0
-theme_override_fonts/font = ExtResource("6_amss0")
-theme_override_font_sizes/font_size = 8
-text = "3<"
-
 [node name="Bar" type="TextureProgressBar" parent="." unique_id=1576020821]
-offset_left = 40.0
+z_index = 2000
+offset_left = 69.0
 offset_top = 94.0
-offset_right = 142.0
+offset_right = 171.0
 offset_bottom = 134.0
 scale = Vector2(0.5, 0.5)
 value = 67.0
@@ -111,19 +102,62 @@ texture_under = ExtResource("7_6e5e6")
 texture_progress = ExtResource("8_114ii")
 
 [node name="SpriteO2" type="Sprite2D" parent="." unique_id=1867533275]
-position = Vector2(35, 98)
+z_index = 2000
+position = Vector2(64, 98)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_114ii")
 
 [node name="SpriteBitcoin" type="Sprite2D" parent="." unique_id=1210579320]
-position = Vector2(40, 85)
+z_index = 2000
+position = Vector2(69, 85)
 texture = ExtResource("10_emr1h")
 
 [node name="LabelBitcoin" type="Label" parent="." unique_id=1996378618]
-offset_left = 49.0
+top_level = true
+z_index = 2000
+offset_left = 78.0
 offset_top = 79.0
-offset_right = 66.0
+offset_right = 95.0
 offset_bottom = 91.0
 theme_override_fonts/font = ExtResource("6_amss0")
 theme_override_font_sizes/font_size = 8
 text = "0"
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=671333710]
+light_mask = 1023
+position = Vector2(62, 53)
+scale = Vector2(1.9374999, 1.65625)
+energy = 0.5
+range_z_min = 2000
+range_z_max = 4000
+texture = SubResource("GradientTexture2D_rgf3o")
+
+[node name="Label1" type="Label" parent="." unique_id=1218530196]
+z_index = 2000
+offset_left = 7.0
+offset_top = 55.0
+offset_right = 73.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("6_amss0")
+theme_override_font_sizes/font_size = 8
+text = "1<"
+
+[node name="Label2" type="Label" parent="." unique_id=213254940]
+z_index = 2000
+offset_left = 6.0
+offset_top = 72.0
+offset_right = 18.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("6_amss0")
+theme_override_font_sizes/font_size = 8
+text = "2v"
+
+[node name="Label3" type="Label" parent="." unique_id=1844516684]
+z_index = 2000
+offset_left = 6.0
+offset_top = 88.0
+offset_right = 18.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("6_amss0")
+theme_override_font_sizes/font_size = 8
+text = "3<"

@@ -12,6 +12,7 @@ const SLIPPERY_INDEX = 2
 @onready var bp = %Inventory/BlockPicker
 @onready var gameOver = $Cam/GameOverScreen
 @onready var cam = $Cam
+@onready var sun = %DirectionalLight
 
 var oxygen = float(100.0)
 
@@ -92,6 +93,7 @@ func _physics_process(delta: float) -> void:
 		isDead = true
 		cam.zoom.x = 1.0
 		cam.zoom.y = 1.0
+		sun.enabled = false
 		
 	if is_on_floor(): 
 		startFallY = position.y
@@ -102,5 +104,6 @@ func _physics_process(delta: float) -> void:
 		isDead = true
 		cam.zoom.x = 1.0
 		cam.zoom.y = 1.0
+		sun.enabled = false
 		
 	move_and_slide()

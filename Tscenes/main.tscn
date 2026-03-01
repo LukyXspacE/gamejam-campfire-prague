@@ -28,3 +28,9 @@ position = Vector2(-114, 14)
 
 [node name="Station" parent="." unique_id=898756571 instance=ExtResource("3_tjfnl")]
 position = Vector2(-42, -208)
+
+[node name="DirectionalLight" type="DirectionalLight2D" parent="." unique_id=692324295]
+unique_name_in_owner = true
+blend_mode = 1
+range_layer_min = -100
+range_layer_max = 100
