@@ -105,7 +105,7 @@ func _input(event: InputEvent) -> void:
 		
 		addResource(data)
 		
-		if get_cell_source_id(cell) != 5 or 6:
+		if data not in [5, 6]:
 			erase_cell(cell)
 			if get_cell_source_id(cell) != 1 or -1:
 				mineSound.play()
