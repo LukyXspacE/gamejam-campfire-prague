@@ -43,11 +43,11 @@ func syncText():
 	monetTxt.text = str(money)
 
 func smelt():
-	var i = 0
+	var ammount = min(uranium, ironRaw)
 	
-	while i < uranium and i < iron:
+	for i in ammount:
 		uranium -= 1
-		ironRaw -= 2
+		ironRaw -= 1
 		syncText()
 		iron += 2
 		syncText()
