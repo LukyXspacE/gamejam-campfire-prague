@@ -4,7 +4,7 @@ Made for a game for gamjam campfire prague in godot 4.6
 Known bugs:
 - Sometimes sound cuts off
 - There may be onter undiscoverd bugs - please report
-- 
+
 Tutorial:
 - A/D to move, W/SPACE to jump
 - Oxygen replanishes near station on top of first iland
