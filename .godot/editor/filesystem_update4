@@ -1,0 +1,16 @@
+res://Scrpits/player.gd
+res://tscenes/main.tscn
+res://tscenes/map_asteroid.tscn
+res://Scrpits/map.gd
+res://tscenes/player.tscn
+res://Scrpits/controler_cursor_controler.gd
+res://Tscenes/map.tscn
+res://Tscenes/map_asteroid.tscn
+res://Other/Tileset.tres
+res://Tscenes/player.tscn
+res://Scrpits/inventory.gd
+res://Tscenes/inventory.tscn
+res://Tscenes/main.tscn
+res://Other/structuresGuiTileset.tres
+res://Scrpits/game_over_screen.gd
+res://Tscenes/game_over_screen.tscn
