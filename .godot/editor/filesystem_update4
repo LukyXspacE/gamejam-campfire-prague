@@ -2,3 +2,6 @@ res://Scrpits/inventory.gd
 res://Scrpits/map.gd
 res://Scrpits/player.gd
 res://Tscenes/inventory.tscn
+res://Tscenes/map_asteroid.tscn
+res://Other/structuresGuiTileset.tres
+res://Other/Tileset.tres
