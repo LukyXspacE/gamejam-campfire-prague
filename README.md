@@ -1,5 +1,5 @@
 This is a readme for Subsurface Extraction
-Made for a game for gamjam campfire prague in godot 4.6
+Made for a game for gamejam campfire prague in godot 4.6
 
 Known bugs:
 - Sometimes sound cuts off
